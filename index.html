@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Przelicznik walut</title>
+    <link href="./css/style.css" rel="stylesheet" type="text/css">
+    <link href="./css/form.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+        integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU=" crossorigin="anonymous" />
+    <script defer src="./js/script.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1 class="header">Przelicznik walut</h1>
+        </header>
+        <main>
+            <form class="form js-formPlEuro">
+                <fieldset class="form__fieldset">
+                    <legend class="form__legend">Kalkulator euro</legend>
+                    <p>
+                        <label>
+                            <span class="form__labelText">Wpisz kwotę w złotówkach</span>
+                            <input class="js-polishZlotyForEuro form__input" type="number" step="0.01" min="0" required>
+                        </label>
+                    </p>
+                    <p>
+                        <label>
+                            <span class="form__labelText">Średni kurs euro NBP</span>
+                            <input class="js-euroRate form__input" type="number" value="0.2239" readonly>
+                        </label>
+                    </p>
+                    <button type="reset">Wyczyść</button>
+                    <p class="js-plEuroResponse form__response">Wynik</p>
+                </fieldset>
+            </form>
+
+            <form class="form js-formPlOther">
+                <fieldset class="form__fieldset">
+                    <legend class="form__legend">Kalkulator innych walut</legend>
+                    <p>
+                        <label>
+                            <span class="form__labelText">Wpisz kwotę w złotówkach</span>
+                            <input class="js-polishZlotyForOther form__input" type="number" step="0.01" min="0"
+                                required>
+                        </label>
+                    </p>
+                    <p>
+                        <label>
+                            <span class="form__labelText">Wybierz walutę</span>
+                            <select class="form__selectCurrency js-currencySelected">
+                                <option value="USD">Dolar amerykański</option>
+                                <option value="GBP">Funt brytyjski</option>
+                                <option value="SGD">Dolar singapurski</option>
+                            </select>
+                        </label>
+                    </p>
+                    <button class="js-submitPlOther" type="submit"> Oblicz</button>
+                    <button type="reset">Wyczyść</button>
+                    <p class="form__response js-plOtherResponse">Wynik</p>
+                </fieldset>
+            </form>
+        </main>
+    </div>
+</body>
+
+</html>
