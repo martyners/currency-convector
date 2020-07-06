@@ -11,10 +11,12 @@
 .form__labelText {
     display: inline-block;
     width: 250px;
+    font-weight: 700;
 }
 
 .form__response {
     font-weight: 700;
+    text-align: center;
 }
 
 .form__input {
